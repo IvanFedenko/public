@@ -244,29 +244,29 @@ const Group = React.createClass({
     return (
       <div className="group">
               <img className="group-avatar" src={avatar} />
-        <div>
+          <div>
                 <a className="group-name">
                  {name}
-                </a>
-                <div className="place">
-                <i className="fa fa-map-marker map" /> <p className="city"> Дніпро </p>
-                </div>
+                 </a>
+                 <div className="place">
+                 <i className="fa fa-map-marker map" /> <p className="city"> Дніпро </p>
+                 </div>
 
-          <div className="group-stats">
-             <div className="face">
-             <a className="group-stat-icon fa fa-facebook-square" href={facebook} target="_blanc"> </a>
-             </div>
+            <div className="group-stats">
+                 <div className="face">
+                 <a className="group-stat-icon fa fa-facebook-square" href={facebook} target="_blank"> </a>
+                 </div>
 
-             <div className="git">
-             <a className="group-stat-icon fa fa-git-square" href={github} target="_blanc" > </a>
-             </div>
+                 <div className="git">
+                 <a className="group-stat-icon fa fa-git-square" href={github} target="_blank" > </a>
+                 </div>
 
-             <div className="em">
-             <a className="group-stat-icon fa fa-envelope" href={email} target="_blanc"> </a>
-             </div>
+                 <div className="em">
+                 <a className="group-stat-icon fa fa-envelope" href={email} target="_blank"> </a>
+                 </div>
 
-          </div>
-        </div>
+            </div>
+         </div>
       </div>
     );
   }

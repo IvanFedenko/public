@@ -89,3 +89,7 @@ a:visited {
   margin-top:10px;
   font-weight: bold;
 }
+.flip {
+  width: 150px;
+  height: 150px;
+}
