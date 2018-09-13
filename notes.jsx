@@ -1,29 +1,41 @@
-const Notes= [{id:1, color:'yellow', text:"Hey! I am the first note here!"}];
+const DEFOULT_color = 'yellow';
 
 const Note = React.createClass ({
   render() {
-    const {text} = this.props;
+    const {
+      color,
+      children
+    } = this.props;
+
     return(
-      <div>
-      {text}
+      <div className="note" style={{ backgroundColor: color}}>
+      {children}
       </div>
     );
   }
 });
+
 const NotesEditor = React.createClass ({
   render() {
     return(
-      <div>
-      Hey! i am Notes Editor!
+      <div className="editor">
+        <textarea
+          rows={5}
+          placeholder="Enter your note here..."
+          className= "editor__textarea"
+        />
+
+        <button className="editor__button">Add</button>
       </div>
     );
   }
 });
+
 const NotesGrid = React.createClass ({
   render() {
     const {notes} = this.props;
     return(
-      <div>
+      <div className="grid">
       {
         notes.map(note =>
         <Note key={note.id}
@@ -36,6 +48,7 @@ const NotesGrid = React.createClass ({
     );
   }
 });
+
 const NotesApp = React.createClass ({
   getInitialState() {
     return {
@@ -45,14 +58,15 @@ const NotesApp = React.createClass ({
   },
   render() {
     return(
-      <div>
-        <h2>NotesApp</h2>
+      <div className="app">
+        <h2 className="app__header">NotesApp</h2>
         <NotesEditor/>
         <NotesGrid notes={this.state.notes} />
       </div>
     );
   }
 });
+
 ReactDOM.render(
   <NotesApp/>,
   document.getElementById ('notes')
